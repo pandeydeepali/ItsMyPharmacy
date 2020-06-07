@@ -1,0 +1,15 @@
+.tab-control {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    margin: 1110;
+    padding: 100;
+
+  }
+  
+.tab-subcontrol  {
+    flex: 1;
+  text-align: center;
+  }
+
+  
