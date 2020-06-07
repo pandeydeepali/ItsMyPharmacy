@@ -258,6 +258,39 @@ class Login extends React.Component {
 
                 </div>
               </form>
+              <form onSubmit={(e) => this.validateUser(e)}>
+                <div className="form-group">
+
+
+                  {
+
+                    this.state.errors.bothemailnpass ? <p className="text-danger text-left font-weight-bold">{this.state.errors.bothemailnpass}</p> : null
+                  }
+
+
+                  <EmailTextField emailClass="form-control form-control-lg rounded-0 mt-3" emailPlaceholder="Enter your Email" name="email" value={this.state._emailVal} onChange={(e) => this.handleEmailChange(e)} />
+
+                  {
+
+                    this.state.errors.email ? <p className="text-danger text-left font-weight-bold">{this.state.errors.email}</p> : null
+                  }
+
+                  <PasswordTextField passwordClass="form-control form-control-lg rounded-0 mt-3" passwordPlaceholder="Enter your Password" name="pass" value={this.state._passVal} onChange={(e) => this.handlePassChange(e)} />
+
+
+                  {
+
+                    this.state.errors.pass ? <p className="text-danger text-left font-weight-bold">{this.state.errors.pass}</p> : null
+                  }
+
+                  <AppButton btnclassName="btn btn-primary btn-lg btn-block font-weight-bold rounded-0 mt-4" btnText="LOGIN" />
+
+                  <AppAnchor href="https://www.google.com" anchorClass="float-left small mt-2" anchorText="Forgot Password" />
+
+                  <AppButton btnclassName="btn btn-primary btn-lg btn-block font-weight-bold rounded-0 mt-4" btnText="CREATE ACCOUNT" onClick={() => this.navigatetoNewUserAccount()} />
+
+                </div>
+              </form>
               <FooterMenu href="https://www.google.com" privacyhref="https://www.google.com" textLeft="Terms&Conditions" textRight="Privacy" />
 
             </div>
